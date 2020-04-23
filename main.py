@@ -1,4 +1,6 @@
 import tkinter as tk
+from enemy import *
+
 #主角
 class character(object):
     def __init__(self):
@@ -25,10 +27,6 @@ class character(object):
     #装备
     def equip_up(self, equip):
         pass
-    
-#装备类
-class equip(object):
-    pass
 
 man = character()
 
@@ -77,8 +75,16 @@ def rush():
         equip_bt = tk.Button(character_win, text = '装备', width = 7, height = 2, command = show_equip)
         equip_bt.place(x = 30, y = 90, anchor = 'nw')
     #角色按钮
-    character_bt = tk.Button(window, text = '角色', width = 7,height = 2, command = character)
+    character_bt = tk.Button(window, text = '角色', width = 7, height = 2, command = character)
     character_bt.place(x = 30, y = 30, anchor = 'nw')
+
+    #冒险函数
+    def adventure():
+        pass
+    #冒险按钮
+    adventure_bt = tk.Button(window, text = '冒险', width = 7, height = 2, command = adventure)
+    adventure_bt.place(x = 30, y = 90, anchor = 'nw')
+
 
     window.mainloop()
 
