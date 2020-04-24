@@ -80,7 +80,24 @@ def rush():
 
     #冒险函数
     def adventure():
-        pass
+        adventure_win = tk.Tk()
+        adventure_win.title('冒险')
+        adventure_win.geometry('500x300')
+        #关闭按钮
+        def close_adventure_win():
+            adventure_win.destroy()
+        close_bt = tk.Button(adventure_win, text = '关闭', width = 7,height = 2, command = close_adventure_win)
+        close_bt.place(x = 30, y = 200, anchor = 'nw')
+        #敌人列表
+        enemy_listbox = tk.Listbox(adventure_win)
+        for i in enemy_list:
+            enemy_listbox.insert('end',i)
+        enemy_listbox.place(x = 200, y = 30, anchor = 'nw')
+        #挑战按钮
+        def challenge():
+            pass
+        challenge_bt = tk.Button(adventure_win, text = '挑战', width = 7, height = 2, command = challenge)
+        challenge_bt.place(x = 30, y = 30, anchor = 'nw')
     #冒险按钮
     adventure_bt = tk.Button(window, text = '冒险', width = 7, height = 2, command = adventure)
     adventure_bt.place(x = 30, y = 90, anchor = 'nw')
